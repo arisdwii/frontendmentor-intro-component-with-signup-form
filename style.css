@@ -1,0 +1,321 @@
+:root {
+  /* Primary */
+  --pred: hsl(0, 100%, 74%);
+  --pgreen: hsl(154, 59%, 51%);
+
+  /* Accent */
+  --ablue: hsl(248, 32%, 49%);
+
+  /* Neutral */
+  --ndark-blue: hsl(249, 10%, 26%);
+  --ngrayish-blue: hsl(246, 25%, 77%);
+  --nwhite: white;
+}
+
+* {
+  margin: 0;
+  padding: 0;
+  box-sizing: border-box;
+}
+
+body {
+  width: 100%;
+  min-height: 100dvh;
+  overflow-x: hidden;
+  position: relative;
+  background-color: var(--pred);
+  background-image: url(images/bg-intro-mobile.png);
+  background-size: cover;
+  background-repeat: no-repeat;
+  font-family: "Poppins", sans-serif;
+  font-weight: 400;
+  font-size: 0.9rem;
+  color: var(--nwhite);
+}
+
+main {
+  width: 100%;
+  max-width: 280px;
+  margin: 0 auto;
+  padding: 3em 1em;
+}
+
+main header {
+  text-align: center;
+}
+
+main header h1 {
+  font-size: 1.5rem;
+}
+
+main header p {
+  margin-top: 1.5em;
+  font-size: 0.8rem;
+}
+
+main section.promo {
+  background-color: var(--ablue);
+  border-radius: 8px;
+  margin-top: 3em;
+  padding: 1.2em 3em;
+  text-align: center;
+  font-size: 0.8rem;
+  box-shadow: rgba(0, 0, 0, 0.2) 0px 6px;
+}
+
+main section.promo p {
+  font-weight: 700;
+}
+
+section.promo p span {
+  font-weight: 400;
+}
+
+main aside.success-msg {
+  background-color: var(--pgreen);
+  padding: 1em;
+  margin-top: 2em;
+  border-radius: 8px;
+  display: flex;
+  gap: 6px;
+  font-weight: 500;
+  font-size: 0.9rem;
+}
+
+main aside.success-msg p span {
+  text-decoration: underline;
+}
+
+main aside.success-msg.hidden {
+  display: none;
+  pointer-events: none;
+}
+
+main article {
+  background-color: var(--nwhite);
+  color: var(--ndark-blue);
+  border-radius: 8px;
+  margin-top: 1.2em;
+  padding: 1.3em;
+  box-shadow: rgba(0, 0, 0, 0.2) 0px 6px;
+}
+
+form {
+  display: flex;
+  flex-direction: column;
+  gap: 1em;
+}
+
+form .wrapper {
+  position: relative;
+}
+
+form .wrapper input {
+  width: 100%;
+  padding: 1em 3em 1em 1em;
+  border: 1px solid var(--ndark-blue);
+  border-radius: 6px;
+  font-weight: 600;
+  outline: none;
+  font-family: "poppins", sans-serif;
+}
+
+form .wrapper input:focus {
+  border-color: var(--ablue);
+}
+
+form .wrapper .danger-icon {
+  width: 20px;
+  height: 20px;
+  background-color: var(--pred);
+  color: var(--nwhite);
+  font-size: 0.7rem;
+  font-weight: 500;
+  border-radius: 50%;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  position: absolute;
+  top: 50%;
+  right: 0;
+  margin-right: 0.8em;
+  transform: translateY(-50%);
+  opacity: 0;
+  pointer-events: none;
+}
+
+form .inputfname.error .danger-icon,
+form .inputlname.error .danger-icon,
+form .inputemail.error .danger-icon,
+form .inputpassword.error .danger-icon {
+  opacity: 1;
+}
+
+form .inputfname.error input,
+form .inputlname.error input,
+form .inputemail.error input,
+form .inputpassword.error input {
+  border-color: var(--pred);
+  color: var(--pred);
+}
+
+form .inputfname.error input::placeholder,
+form .inputlname.error input::placeholder,
+form .inputemail.error input::placeholder,
+form .inputpassword.error input::placeholder {
+  color: var(--pred);
+}
+
+form .inputfname p,
+form .inputlname p,
+form .inputemail p,
+form .inputpassword p {
+  color: var(--pred);
+  font-style: italic;
+  font-size: 0.7rem;
+  text-align: right;
+  margin: 0.3em 0;
+  display: none;
+}
+
+form .inputfname.error p,
+form .inputlname.error p,
+form .inputemail.error p,
+form .inputpassword.error p {
+  display: block;
+}
+
+.inputpassword .wrapper .eye {
+  position: absolute;
+  top: 50%;
+  right: 0;
+  transform: translateY(-50%);
+  width: 40px;
+  height: 100%;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  cursor: pointer;
+  transition: all 0.3s ease-in-out;
+}
+
+.inputpassword .wrapper .eye.hidden {
+  opacity: 0;
+  pointer-events: none;
+}
+
+.inputpassword .wrapper .eye svg {
+  width: 18px;
+  height: 18px;
+  pointer-events: none;
+}
+
+article form button {
+  width: 100%;
+  cursor: pointer;
+  background-color: var(--pgreen);
+  color: var(--nwhite);
+  font-family: "Poppins", sans-serif;
+  font-size: 0.7rem;
+  font-weight: 600;
+  letter-spacing: 1px;
+  text-transform: uppercase;
+  padding: 1.5em;
+  border: none;
+  border-radius: 6px;
+  box-shadow: hsla(154, 57%, 37%, 0.2) 0px 3px;
+  transition: all 0.3s ease-in-out;
+}
+
+article form button:hover {
+  background-color: hsl(154, 59%, 70%);
+}
+
+article p {
+  font-size: 0.6rem;
+  text-align: center;
+  margin-top: 1em;
+}
+
+article p a {
+  text-decoration: none;
+  color: var(--pred);
+  font-weight: 700;
+}
+
+article p a:hover {
+  text-decoration: underline;
+}
+
+footer {
+  max-width: 280px;
+  margin: 3em auto 3em;
+  text-align: center;
+}
+
+footer p a {
+  color: var(--nwhite);
+}
+
+footer p a:hover {
+  text-decoration: none;
+}
+
+@media (min-width: 800px) {
+  main {
+    max-width: 800px;
+    display: grid;
+    grid-template-columns: repeat(2, 1fr);
+    align-self: center;
+    gap: 2em;
+  }
+
+  main header {
+    text-align: left;
+    grid-row: span 3;
+    align-self: center;
+    padding-right: 1em;
+  }
+
+  main header h1 {
+    font-size: 2.1rem;
+  }
+
+  main header p {
+    margin-top: 1.5em;
+    font-size: 0.9rem;
+  }
+
+  main section.promo {
+    margin-top: 0;
+  }
+
+  main aside.success-msg {
+    margin-top: 0;
+    font-size: 0.8rem;
+  }
+
+  main article {
+    margin-top: 0;
+    padding: 2em;
+  }
+
+  form {
+    gap: 1.5em;
+  }
+
+  article p {
+    font-size: 0.7rem;
+    margin-top: 1.4em;
+  }
+}
+
+@media (min-width: 1024px) {
+  main {
+    max-width: 1024px;
+  }
+
+  main header h1 {
+    font-size: 2.5rem;
+  }
+}

@@ -1,0 +1,119 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <meta name="description" content="Learn to code by watching others">
+  <!-- Google Fonts -->
+  <link rel="preconnect" href="https://fonts.googleapis.com">
+  <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+  <link
+    href="https://fonts.googleapis.com/css2?family=Poppins:ital,wght@0,100;0,200;0,300;0,400;0,500;0,600;0,700;0,800;0,900;1,100;1,200;1,300;1,400;1,500;1,600;1,700;1,800;1,900&display=swap"
+    rel="stylesheet">
+  <!-- CSS -->
+  <link rel="stylesheet" href="style.css">
+  <!-- Icon -->
+  <link rel="icon" type="image/png" sizes="32x32" href="./images/favicon-32x32.png">
+
+  <title>Frontend Mentor | Intro component with sign up form</title>
+</head>
+
+<body>
+  <main>
+    <header>
+      <h1>Learn to code by watching others</h1>
+      <p>See how experienced developers solve problems in real-time. Watching scripted tutorials is great, but
+        understanding how developers think is invaluable.</p>
+    </header>
+
+    <section class="promo">
+      <p>Try it free 7 days <span>then $20/mo. thereafter</span></p>
+    </section>
+
+    <aside class="success-msg hidden">
+      <span>
+        <svg xmlns="http://www.w3.org/2000/svg" width="24" height="24" viewBox="0 0 24 24">
+          <path fill="currentColor" fill-rule="evenodd"
+            d="M12 22C6.477 22 2 17.523 2 12S6.477 2 12 2s10 4.477 10 10s-4.477 10-10 10m-1.177-7.86l-2.765-2.767L7 12.431l3.119 3.121a1 1 0 0 0 1.414 0l5.952-5.95l-1.062-1.062z" />
+        </svg>
+      </span>
+
+      <p>Trial claim successful, you will be redirected to the dashboard page in <span class="seconds">5</span> seconds
+      </p>
+    </aside>
+
+    <article class="signup-form">
+      <form>
+        <div class="inputfname">
+          <div class="wrapper">
+            <input type="text" name="first-name" id="first-name" placeholder="First Name"
+              aria-describedby="input first name">
+
+            <span class="danger-icon">!</span>
+          </div>
+
+          <p aria-live="polite" class="firstname-msg"></p>
+        </div>
+
+        <div class="inputlname">
+          <div class="wrapper">
+            <input type="text" name="last-name" id="last-name" placeholder="Last Name"
+              aria-describedby="input last name">
+
+            <span class="danger-icon">!</span>
+          </div>
+
+          <p aria-live="polite" class="lastname-msg"></p>
+        </div>
+
+        <div class="inputemail">
+          <div class="wrapper">
+            <input type="email" name="email-address" id="email-address" placeholder="Email Address"
+              aria-describedby="input email address">
+
+            <span class="danger-icon">!</span>
+          </div>
+
+          <p aria-live="polite" class="email-msg"></p>
+        </div>
+
+        <div class="inputpassword">
+          <div class="wrapper">
+            <input type="password" name="password" id="password" placeholder="Password"
+              aria-describedby="input password">
+
+            <span class="eye hidden">
+              <svg xmlns="http://www.w3.org/2000/svg" width="20" height="20" viewBox="0 0 24 24" fill="none"
+                stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round">
+                <path d="M1 12s4-8 11-8 11 8 11 8-4 8-11 8-11-8-11-8z" />
+                <circle cx="12" cy="12" r="3" />
+              </svg>
+            </span>
+
+            <span class="danger-icon">!</span>
+          </div>
+
+          <p aria-live="polite" class="password-msg"></p>
+        </div>
+
+        <button type="submit">Claim your free trial</button>
+      </form>
+
+      <p>By clicking the button, you are agreeing to our <a href="" aria-label="go to terms and services">Terms and
+          Services</a></p>
+    </article>
+  </main>
+
+  <footer>
+    <p>
+      Challenge by <a href="https://www.frontendmentor.io?ref=challenge" target="_blank"
+        aria-label="go to frontend mentor website">Frontend Mentor</a>.
+      Coded by <a href="https://github.com/arisdwii" aria-label="go to aris github">arisdwii</a>.
+    </p>
+  </footer>
+
+  <script src="script.js"></script>
+</body>
+
+</html>
